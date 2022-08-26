@@ -85,11 +85,7 @@ const morseCode = {
     z: '--**',
 };
 
-const secretMessage = [
-    "o six hundred hours weather today is clear rain in the evening heil hitler",
-    "hello world",
-    "six degrees north and three degrees west",
-];
+const secretMessage = ["o six hundred hours weather today is clear rain in the evening heil hitler", "hello world", "six degrees north and three degrees west"];
     
 function u_substitution(message) {
     let messageArr = message.split('').map(el => wirePairs[el]);
@@ -101,5 +97,5 @@ function u_substitution(message) {
     return codedMessage;
 }
 
-console.log(u_substitution('hi'));
+console.log(u_substitution());
 
