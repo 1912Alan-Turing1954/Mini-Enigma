@@ -93,7 +93,7 @@ const secretMessage = {
 
 let str = _secretMessage => {Math.random(Math.floor) * 2};
     
-function u_substitution(message) {
+function substitution(message) {
     let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
     let messageArr2 = messageArr.map(el => alphabet[el]);
