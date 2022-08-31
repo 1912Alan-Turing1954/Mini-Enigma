@@ -103,5 +103,5 @@ function u_substitution(message) {
     return codedMessage;
 }
 
-console.log(u_substitution(str));
+console.log(substitution(str));
 
