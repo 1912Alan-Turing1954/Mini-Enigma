@@ -84,24 +84,28 @@ const morseCode = {
     y: '-*--',
     z: '--**',
 };
-
-const secretMessage = {
-    0: "o six hundred hours weather today is clear rain in the evening heil hitler",
-    1: "hello world",
-    2: "six degrees north and three degrees west",
-};
-
-let str = _secretMessage => {Math.random(Math.floor) * 2};
     
-function substitution(message) {
+function substitution(message, spindleOffSet=0, rotatePoint=25) {
+    let spindleCounter = spindleOffSet;
+    
     let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
-    let messageArr2 = messageArr.map(el => alphabet[el]);
-    
-    let codedMessage = messageArr2.map(el => morseCode[el]).join(' ');
+    let messageArr2 = messageArr.map(el => {
+        let inputSpindle = (el + spindleCounter) % 26;
+
+        let answer = inputSpindle;
+        
+        spindleCounter = (spindleCounter + 1) % 26;
+
+        if (spindleCounter === rotatePoint) {
+            spindleCounter = (spindleCounter - 25) % 26;
+        }
+        
+        return answer;
+    }
 
     return messageArr2.join('');
 }
 
-console.log(substitution(str));
+console.log(substitution('a', 0, 25));
 
