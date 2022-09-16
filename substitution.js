@@ -87,7 +87,7 @@ const morseCode = {
     
 function substitution(message, spindleOffSet=0, rotatePoint=25) {
     let spindleCounter = spindleOffSet;
-    
+
     let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
     let messageArr2 = messageArr.map(el => {
@@ -102,9 +102,12 @@ function substitution(message, spindleOffSet=0, rotatePoint=25) {
         return answer;
     });
 
-    return messageArr2.map(el => alphabet[el]).join('');
-}
+    return messageArr2.map(el => alphabet[el]).join(' ');
+    
+    // let morse = messageArr2.map(el => alphabet[el]);
+
+    // return morse.map(el => morseCode[el]).join('');
+};
 
 
-console.log(substitution('message', 0, 25));
-
+console.log(substitution('' , 0, 25));
