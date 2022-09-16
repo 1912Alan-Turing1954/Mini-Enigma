@@ -28,32 +28,32 @@ const wirePairs = {
 };
 
 const alphabet = {
-    0: 't',
+    0: 'a',
     1: 'b',
-    2: 'q',                        
-    3: 'k',
-    5: 'o', 
-    4: 'd',
-    6: 'r',
-    7: 'v',
-    8: 'h',
-    9: 'i',
-    10: 'l',
-    11: 's', 
-    12: 'x', 
-    13: 'a',
-    14: 'u',
-    15: 'y',
-    16: 'g',
-    17: 'c',
-    18: 'j',
-    19: 'f',
-    20: 'n',
-    21: 'e',
+    2: 'c',                        
+    3: 'd',
+    5: 'e', 
+    4: 'f',
+    6: 'g',
+    7: 'h',
+    8: 'i',
+    9: 'j',
+    10: 'k',
+    11: 'l', 
+    12: 'm', 
+    13: 'n',
+    14: 'o',
+    15: 'p',
+    16: 'q',
+    17: 'r',
+    18: 's',
+    19: 't',
+    20: 'u',
+    21: 'v',
     22: 'w',
-    23: 'p',
-    24: 'z',
-    25: 'm', 
+    23: 'x',
+    24: 'y',
+    25: 'z', 
 };
 
 const morseCode = {
@@ -91,21 +91,20 @@ function substitution(message, spindleOffSet=0, rotatePoint=25) {
     let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
     let messageArr2 = messageArr.map(el => {
-        let inputSpindle = (el + spindleCounter) % 26;
-
+        let inputSpindle = (el + spindleCounter) % 25;
         let answer = inputSpindle;
-        
-        spindleCounter = (spindleCounter + 1) % 26;
+        spindleCounter = (spindleCounter + 1) % 25;
 
-        if (spindleCounter === rotatePoint) {
-            spindleCounter = (spindleCounter - 25) % 26;
-        }
+    if (spindleCounter === rotatePoint) {
+        spindleCounter = (spindleCounter - 24) % 26;
+    }
         
         return answer;
-    }
+    });
 
-    return messageArr2.join('');
+    return messageArr2.map(el => alphabet[el]).join('');
 }
 
-console.log(substitution('a', 0, 25));
+
+console.log(substitution('hello', 1, 25));
 
