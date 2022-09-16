@@ -100,7 +100,7 @@ function substitution(message) {
     
     let codedMessage = messageArr2.map(el => morseCode[el]).join(' ');
 
-    return codedMessage;
+    return messageArr2.join('');
 }
 
 console.log(substitution(str));
