@@ -32,8 +32,8 @@ const alphabet = {
     1: 'b',
     2: 'c',                        
     3: 'd',
-    5: 'e', 
-    4: 'f',
+    4: 'e', 
+    5: 'f',
     6: 'g',
     7: 'h',
     8: 'i',
@@ -106,5 +106,5 @@ function substitution(message, spindleOffSet=0, rotatePoint=25) {
 }
 
 
-console.log(substitution('hello', 1, 25));
+console.log(substitution('message', 0, 25));
 
