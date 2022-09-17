@@ -12,7 +12,7 @@ html {
 }
 
 
-#text {
+#output {
 	display: flex;
 	height: 100px; 
 	outline: none;
@@ -21,21 +21,28 @@ html {
 	font-family: Courier New;
 }
 
-/* #container {
+#container {
 	display: inline-block;
 }
 
 #container p {
 	color: white;
 	overflow: hidden;
-	border-right: .15em solid white;
+	border-right: .05em solid white;
 	white-space: nowrap;
 	animation: typing 1s steps(20, end) forwards;
-	font-size: 1.5rem;
+	font-size: 3.0rem;
 	width: 0;
 }
+
 @keyframes typing {
 	from { width: 0 }
 	to { width: 100% }
-} */
+}
+
+@keyframes blink {
+	/* from, to { color: transparent; } */
+}
+
+
 
