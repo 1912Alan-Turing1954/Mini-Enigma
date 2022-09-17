@@ -1,16 +1,41 @@
-/* override bootstrap active state */
-button.btn-default:active {
-	background-color: #FFF;
-	-webkit-box-shadow: none;
-	box-shadow: none;
+html {
+	background: black;
 }
-button.btn-default:active:hover {
-	background-color: #3276B1;
+
+#input {
+	display: flex;
+	height: 100px; 
+	outline: none;
+	font-size: xx-large;
+	justify-content: center;
+	font-family: Courier New;
 }
-/* override Bootstrap excessive button padding */
-button.ui-keyboard-button.btn {
-	padding: 1px 6px;
+
+
+#text {
+	display: flex;
+	height: 100px; 
+	outline: none;
+	font-size: xx-large;
+	justify-content: center;
+	font-family: Courier New;
 }
-/* Bootswatch Darkly input is too bright */
-.ui-keyboard-input.light, .ui-keyboard-preview.light { color: #222; background: #ddd; }
-.ui-keyboard-input.dark, .ui-keyboard-preview.dark { color: #ddd; background: #222; }
+
+/* #container {
+	display: inline-block;
+}
+
+#container p {
+	color: white;
+	overflow: hidden;
+	border-right: .15em solid white;
+	white-space: nowrap;
+	animation: typing 1s steps(20, end) forwards;
+	font-size: 1.5rem;
+	width: 0;
+}
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+} */
+
