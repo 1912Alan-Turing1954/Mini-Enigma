@@ -85,4 +85,3 @@ export const morseCode = {
     z: '--**',
 };
 
-// export { wirePairs, alphabet, morseCode };
