@@ -1,5 +1,10 @@
 html {
-	background: black;
+	background: tan;
+}
+
+@font-face {
+	font-family: '1942';
+	src: url(./font/1942-report/1942.ttf);
 }
 
 #container-1 {
@@ -7,13 +12,14 @@ html {
 }
 
 #container-1 p {
-	color: white;
+	color: black;
 	overflow: hidden;
-	border-right: .05em solid white;
+	border-right: .05em solid black;
 	white-space: nowrap;
 	animation: typing-1 1.5s steps(40, end) forwards, blink-caret .8s infinite;
 	animation-delay: 2s;
 	font-size: larger;
+	font-family: '1942';
 	width: 0;
 }
 
@@ -24,13 +30,14 @@ html {
 
 @keyframes blink-caret {
 	from, to { border-color: transparent; }
-	50% { border-color: white; }
+	50% { border-color: black; }
 }
 
 
 label {
-	color: white;
-	font-size: larger;
+	color: black;
+	font-size: large;
+	font-family: '1942';
 }
 
 #offSet {
@@ -38,12 +45,14 @@ label {
 	width: 60px;
 	height: 35px;
 	font-size: large;
+	font-family: '1942';
 }
 
 #btn {
 	color: black;
 	width: 65px;
 	height: 40px;
+	font-family: '1942';
 }
 
 #input {
@@ -52,7 +61,7 @@ label {
 	outline: none;
 	font-size: xx-large;
 	justify-content: center;
-	font-family: Courier New;
+	font-family: '1942';
 }
 
 
@@ -62,7 +71,7 @@ label {
 	outline: none;
 	font-size: xx-large;
 	justify-content: center;
-	font-family: Courier New;
+	font-family: '1942';
 }
 
 #container-2 {
@@ -70,12 +79,13 @@ label {
 }
 
 #container-2 p {
-	color: white;
+	color: black;
 	overflow: hidden;
-	border-right: .05em solid white;
+	border-right: .05em solid black;
 	white-space: nowrap;
 	animation: typing 1.5s steps(20, end) forwards, blink .8s infinite;
 	font-size: 3.0rem;
+	font-family: '1942';
 	width: 0;
 }
 
@@ -86,7 +96,7 @@ label {
 
 @keyframes blink {
 	from, to { border-color: transparent; }
-	50% { border-color: white; }
+	50% { border-color: black; }
 }
 
 
