@@ -17,6 +17,15 @@ label {
 
 #offSet {
 	outline: none;
+	width: 60px;
+	height: 35px;
+	font-size: large;
+}
+
+#btn {
+	color: black;
+	width: 65px;
+	height: 40px;
 }
 
 #input {
