@@ -2,8 +2,17 @@ html {
 	background: black;
 }
 
+#para {
+	display: flex;
+	color: white;
+	font-size: x-large;
+	justify-content:space-around;
+	align-items:center;
+}
+
 label {
 	color: white;
+	font-size: larger;
 }
 
 #offSet {
