@@ -1,5 +1,5 @@
 html {
-	background: tan;
+	background: whitesmoke;
 }
 
 @font-face {
@@ -7,11 +7,11 @@ html {
 	src: url(./font/1942-report/1942.ttf);
 }
 
-#container-1 {
+#container-2 {
 	display: inline-block;
 }
 
-#container-1 p {
+#container-2 p {
 	color: black;
 	overflow: hidden;
 	border-right: .05em solid black;
@@ -36,21 +36,21 @@ html {
 
 label {
 	color: black;
-	font-size: large;
+	font-size: x-large;
 	font-family: '1942';
 }
 
 #offSet {
 	outline: none;
 	width: 60px;
-	height: 35px;
+	height: 30px;
 	font-size: large;
 	font-family: '1942';
 }
 
 #btn {
 	color: black;
-	width: 65px;
+	width: 75px;
 	height: 40px;
 	font-family: '1942';
 }
@@ -74,11 +74,11 @@ label {
 	font-family: '1942';
 }
 
-#container-2 {
+#container-1 {
 	display: inline-block;
 }
 
-#container-2 p {
+#container-1 p {
 	color: black;
 	overflow: hidden;
 	border-right: .05em solid black;
