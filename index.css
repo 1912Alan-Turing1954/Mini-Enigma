@@ -2,13 +2,31 @@ html {
 	background: black;
 }
 
-#para {
-	display: flex;
-	color: white;
-	font-size: x-large;
-	justify-content:space-around;
-	align-items:center;
+#container-1 {
+	display: inline-block;
 }
+
+#container-1 p {
+	color: white;
+	overflow: hidden;
+	border-right: .05em solid white;
+	white-space: nowrap;
+	animation: typing-1 1.5s steps(40, end) forwards, blink-caret .8s infinite;
+	animation-delay: 2s;
+	font-size: larger;
+	width: 0;
+}
+
+@keyframes typing-1 {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent; }
+	50% { border-color: white; }
+}
+
 
 label {
 	color: white;
@@ -47,16 +65,16 @@ label {
 	font-family: Courier New;
 }
 
-#container {
+#container-2 {
 	display: inline-block;
 }
 
-#container p {
+#container-2 p {
 	color: white;
 	overflow: hidden;
 	border-right: .05em solid white;
 	white-space: nowrap;
-	animation: typing 1s steps(20, end) forwards, blink .8s infinite;
+	animation: typing 1.5s steps(20, end) forwards, blink .8s infinite;
 	font-size: 3.0rem;
 	width: 0;
 }
