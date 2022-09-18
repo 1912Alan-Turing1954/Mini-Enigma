@@ -2,6 +2,10 @@ html {
 	background: black;
 }
 
+#shift {
+	outline: none;
+}
+
 #input {
 	display: flex;
 	height: 100px; 
@@ -40,8 +44,9 @@ html {
 	to { width: 100% }
 }
 
-@keyframes blink {
-	/* from, to { color: transparent; } */
+@keyframes blink-caret {
+	from, to { border-color: transparent; }
+	50% { border-color: white; }
 }
 
 

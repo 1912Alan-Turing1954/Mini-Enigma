@@ -85,8 +85,15 @@ const morseCode = {
     z: '--**',
 };
     
-function substitution(message, spindleOffSet=0, rotatePoint=25) {
+
+
+
+function substitution() {
+    let spindleOffSet=0;
+    let rotatePoint=25;
     let spindleCounter = spindleOffSet;
+    
+    var message = document.getElementById("input").value;
     
     let messageArr = message.toLowerCase();
 
