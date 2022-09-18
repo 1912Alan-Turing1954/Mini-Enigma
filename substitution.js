@@ -83,12 +83,12 @@ function substitution() {
     let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
     let messageArr2 = messageArr.map(el => {
-        let inputSpindle = (el + spindleCounter) % 25;
+        let inputSpindle = (el + spindleCounter) % 26;
         let answer = inputSpindle;
-        spindleCounter = (spindleCounter + 1) % 25;
+        spindleCounter = (spindleCounter + 1) % 26;
 
     if (spindleCounter === rotatePoint) {
-        spindleCounter = (spindleCounter - 24) % 25;
+        spindleCounter = (spindleCounter - 25) % 26;
     }
         
         return answer;
