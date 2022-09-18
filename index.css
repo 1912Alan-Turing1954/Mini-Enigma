@@ -2,7 +2,11 @@ html {
 	background: black;
 }
 
-#shift {
+label {
+	color: white;
+}
+
+#offSet {
 	outline: none;
 }
 

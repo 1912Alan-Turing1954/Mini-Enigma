@@ -56,50 +56,33 @@ const alphabet = {
     25: 'z', 
 };
 
-const morseCode = {
-    a: '*-',
-    b: '-***',
-    c: '-*-*',
-    d: '-**', 
-    e: '*', 
-    f: '**-*',
-    g: '--*',
-    h: '****',
-    i: '**',
-    j: '*---',
-    k: '-*-',
-    l: '*-**',
-    m: '--', 
-    n: '-*',
-    o: '---',
-    p: '*--*',
-    q: '--*-',
-    r: '*-*',
-    s: '***',
-    t: '-',
-    u: '**-',
-    v: '***-',
-    w: '*--',
-    x: '-**-',
-    y: '-*--',
-    z: '--**',
-};
-    
+let originalInput = document.querySelector("#input");
+let offSetInput = document.querySelector("#offSet");
 
+let originalMessage = originalInput.value;
+    originalInput.addEventListener("input", characterEntered, false);
+    offSetInput.addEventListener("input", numberEntered, false);
 
+function characterEntered(e) {
+    originalMessage = e.target.value;
+    originalMessage = originalMessage.toUpperCase();
+    originalMessage = originalMessage.replace(/[^A-Z]/, '');
+
+    e.target.value = originalMessage;
+
+    substitution(); 
+}
 
 function substitution() {
-    let spindleOffSet=0;
+    let spindleOffSet= offSetInput.value ? Number(offSetInput.value) : 0;
     let rotatePoint=25;
     let spindleCounter = spindleOffSet;
     
-    let message = document.getElementById("input").value;
-    
-    let messageArr = message.toLowerCase();
+    let message = originalMessage.toLowerCase();
 
-    let messageArr2 = messageArr.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
+    let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
-    let messageArr3 = messageArr2.map(el => {
+    let messageArr2 = messageArr.map(el => {
         let inputSpindle = (el + spindleCounter) % 25;
         let answer = inputSpindle;
         spindleCounter = (spindleCounter + 1) % 25;
@@ -111,11 +94,7 @@ function substitution() {
         return answer;
     });
 
-    return document.getElementById("output").value = messageArr3.map(el => alphabet[el]).join('').toUpperCase();
-
-    // let morse = messageArr2.map(el => alphabet[el]);
-
-    // return morse.map(el => morseCode[el]).join('');
+    var arr = messageArr2.map(el => alphabet[el]).join('').toUpperCase();
+    document.getElementById("output").value = arr;
 };
 
-// console.log(substitution('' , 0, 25));

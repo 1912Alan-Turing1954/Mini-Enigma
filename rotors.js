@@ -1,4 +1,4 @@
-export const wirePairs = {
+const wirePairs = {
     a: 0,
     b: 1,
     c: 2,
@@ -27,7 +27,7 @@ export const wirePairs = {
     z: 25,
 };
 
-export const alphabet = {
+const alphabet = {
     0: 't',
     1: 'b',
     2: 'q',                        
@@ -56,7 +56,7 @@ export const alphabet = {
     25: 'm', 
 };
 
-export const morseCode = {
+const morseCode = {
     a: '*-',
     b: '-***',
     c: '-*-*',
