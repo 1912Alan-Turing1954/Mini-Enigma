@@ -93,7 +93,7 @@ function substitution() {
     let rotatePoint=25;
     let spindleCounter = spindleOffSet;
     
-    var message = document.getElementById("input").value;
+    let message = document.getElementById("input").value;
     
     let messageArr = message.toLowerCase();
 
@@ -111,7 +111,7 @@ function substitution() {
         return answer;
     });
 
-    return messageArr3.map(el => alphabet[el]).join('').toUpperCase();
+    return document.getElementById("output").value = messageArr3.map(el => alphabet[el]).join('').toUpperCase();
 
     // let morse = messageArr2.map(el => alphabet[el]);
 
