@@ -12,6 +12,8 @@ a {
 	font-family: '1942';
 	width: 0;
 	position: fixed;
+	display: inline-block;
+	display: flex;
 }	
 
 a:hover {
