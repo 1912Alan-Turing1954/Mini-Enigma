@@ -9,34 +9,57 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
+        <div id="info">
+            <a id="anchor" href="https://brilliant.org/wiki/enigma-machine/" ref="link">Enigma Info</a>
+        </div>
         <center>
             <div id="container-1">
                 <p>Enigma Machine</p>
             </div>
         </center>
         <center>
-            <label for="input">PlainText</label>
-            <input id="input" size="35"></br><br>
+            <label for="output">Encrypted Text</label>
+            <input id="output" size="35"></br><br>
             <label for="offset">Rotor-offSet</label>
             <input type="number" id="offSet" min="0" max="25" placeholder="0"> 
             <button type="button" id="btn" onclick="substitution()">Encrypt</button><br><br><br>
-            <label for="output">Encrypted Text</label>
-            <input id="output" size="35">
+            <label for="input">PlainText</label>
+            <input id="input" size="35">
         </center>
         <center>
             <div id="container-2">
-                <p class="para">
+                <p>
                     This is a Enigma Machine 
-                    container only 1 rotor offset, 
+                    containing only 1 rotor offset, 
                     than the normal 5 or 3 rotors.
                 </p>
-            </div>
-            <div>
+            </div><br>
+            <div id="container-3">
                 <p>
-                    The "Enigma" was made in 
+                    The "Enigma" was made in 1918 at the end of World War 1 by Arthur Scherbius, 
+                    
                 </p>
+            </div><br>
+            <div id="container-4">
+                <p>
+                    a German electrical engineer who lived from 1878 to 1929.
+                </p>
+            </div><br>
+            <div id="container-5">
+                <p>
+                    Enigma is a famous encryption machine 
+                    used by the Germans during WWII to transmit coded messages. 
+                </p>
+            </div><br>
+            <div id="container-6">
+                <P>
+                    It was deemed uncrackable, do to it's 158,962,555,217,826,360,000 possible seetings/encryptions.
+                </P>
             </div>
         </center>
+        <div id="alan-info">
+            <a href="https://turingarchive.kings.cam.ac.uk/" rel="link">Alan Turing Info?</a>
+        </div>
         <script type="text/javascript" src="substitution.js"></script>
     </body>
 </html>
