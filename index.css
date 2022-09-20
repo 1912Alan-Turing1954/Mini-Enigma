@@ -101,6 +101,10 @@ a:hover {
 	font-family: '1942';
 	width: 0;
 }
+#encrypted, #plaintext, #tittle {
+	border-bottom: 1px solid black;
+}
+
 
 label {
 	color: black;
