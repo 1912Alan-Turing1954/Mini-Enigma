@@ -1,5 +1,6 @@
 html {
 	background:darkcyan;
+	transition: background-color .3s ease-in-out;
 }
 
 a {
@@ -117,7 +118,6 @@ label {
 }
 
 #btn {
-	background: darkred;
 	width: 80px;
 	height: 40px;
 	font-family: '1942';
@@ -134,13 +134,12 @@ label {
 }
 
 
+
 #output {
-	background-color: cornsilk;
-	display: flex;
-	height: 100px; 
 	outline: none;
-	font-size: xx-large;
+	word-break: break-all;
 	justify-content: center;
+	font-size: x-large;
 	font-family: '1942';
 }
 

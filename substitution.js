@@ -73,6 +73,10 @@ function characterEntered(e) {
     substitution(); 
 }
 
+function numberEntered() {
+    substitution();
+}
+
 function substitution() {
     let spindleOffSet= offSetInput.value ? Number(offSetInput.value) : 0;
     let rotatePoint=25;
@@ -95,6 +99,6 @@ function substitution() {
     });
 
     var arr = messageArr2.map(el => alphabet[el]).join('').toUpperCase();
-    document.getElementById("output").value = arr;
+    document.querySelector("#output").innerHTML = arr;
 };
 
