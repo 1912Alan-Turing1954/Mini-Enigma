@@ -56,7 +56,27 @@ const alphabet = {
     25: 'z', 
 };
 
-function christopher(message, spindleOffSet=0, rotatePoint=0) {
+let originalInput = document.querySelector("#input");
+let offSetInput = document.querySelector("#offSet");
+
+
+let originalMessage = originalInput.value;
+    originalInput.addEventListener("input", characterEntered, false);
+
+function characterEntered(e) {
+    originalMessage = e.target.value;
+    originalMessage = originalMessage.toUpperCase();
+    originalMessage = originalMessage.replace(/[^A-Z]/, '');
+    
+    e.target.value = originalMessage;
+        
+    christopher(); 
+}
+    
+
+function christopher( ) {
+    let spindleOffSet= offSetInput.value ? Number(offSetInput.value) : 0;
+    let rotatePoint=0; 
     let spindleCounter = spindleOffSet;
     
     let messageArr = message.toLowerCase();
