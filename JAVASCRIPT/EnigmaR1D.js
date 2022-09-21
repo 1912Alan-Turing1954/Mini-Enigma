@@ -56,12 +56,12 @@ const alphabet = {
     25: 'z', 
 };
 
-let originalInput = document.querySelector("#input");
-let offSetInput = document.querySelector("#offSet");
+let input = document.querySelector("#Encrypted");
+let offSet = document.getElementById("offSet");
 
 
-let originalMessage = originalInput.value;
-    originalInput.addEventListener("input", characterEntered, false);
+let originalMessage = input.value;
+    input.addEventListener("input", characterEntered, false);
 
 function characterEntered(e) {
     originalMessage = e.target.value;
@@ -75,15 +75,15 @@ function characterEntered(e) {
     
 
 function christopher( ) {
-    let spindleOffSet= offSetInput.value ? Number(offSetInput.value) : 0;
+    let spindleOffSet= offSet.value ? Number(offSetInput.value) : 0;
     let rotatePoint=0; 
     let spindleCounter = spindleOffSet;
     
-    let messageArr = message.toLowerCase();
+    let message = originalMessage.toLowerCase();
 
-    let messageArr2 = messageArr.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
+    let messageArr = message.split('').filter(el => el !== ' ' ).map(el => wirePairs[el]);
 
-    let messageArr3 = messageArr2.map(el => {
+    let messageArr2 = messageArr.map(el => {
         let inputSpindle = (el - spindleCounter) % 26;
         let answer = inputSpindle;
         spindleCounter = (spindleCounter + 1) % 26;
@@ -95,8 +95,8 @@ function christopher( ) {
         return answer;
     });
 
-    return messageArr3.map(el => alphabet[el]).join('').toUpperCase();
-    
+    var arr = messageArr2.map(el => alphabet[el]).join('').toUpperCase();
+    document.querySelector("#Decrypted").innerHTML = arr;
 };
 
 console.log(christopher('CDEFGHIJK', 2, 0))
