@@ -139,7 +139,10 @@ label {
 	font-family: '1942';
 }
 
-
+#input {
+	gap: 10px;
+	border-bottom: 2px solid black;
+}
 
 #output, #output-2 {
 	outline: none;
