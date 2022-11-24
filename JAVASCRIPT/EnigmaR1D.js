@@ -56,12 +56,12 @@ const alphabet = {
     25: 'z', 
 };
 
-let input = document.querySelector("#Encrypted");
-let offSet = document.getElementById("offSet");
+let originalInput = document.querySelector("#input-2");
+let offSet = document.querySelector("#offSet");
 
 
-let originalMessage = input.value;
-    input.addEventListener("input", characterEntered, false);
+let originalMessage = originalInput.value;
+    originalInput.addEventListener("input", characterEntered, false);
 
 function characterEntered(e) {
     originalMessage = e.target.value;
@@ -74,7 +74,7 @@ function characterEntered(e) {
 }
     
 
-function christopher( ) {
+function christopher() {
     let spindleOffSet= offSet.value ? Number(offSetInput.value) : 0;
     let rotatePoint=0; 
     let spindleCounter = spindleOffSet;
@@ -96,7 +96,7 @@ function christopher( ) {
     });
 
     var arr = messageArr2.map(el => alphabet[el]).join('').toUpperCase();
-    document.querySelector("#Decrypted").innerHTML = arr;
+    document.querySelector("#output-2").innerHTML = arr;
 };
 
 console.log(christopher('CDEFGHIJK', 2, 0))

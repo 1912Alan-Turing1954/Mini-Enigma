@@ -9,9 +9,6 @@
         <link rel="stylesheet" href="../CSS/main.css">
     </head>
     <body>
-        <div id="info">
-            <a id="anchor" href="https://brilliant.org/wiki/enigma-machine/" ref="link">Enigma Info</a>
-        </div>
         <center>
             <div id="container-1">
                 <p id="tittle">Enigma Machine</p>
@@ -25,41 +22,13 @@
             <button id="btn" onclick="reset()">Reset</button><br><br>
             <label id="plaintext" for="input">PlainText</label>
             <input id="input" autocomplete="off" size="35">
-        </center>
+        </center><br><br>
         <center>
-            <div id="container-2">
-                <p>
-                    This is a Enigma Machine 
-                    containing only 1 rotor offset, 
-                    than the normal 5 or 3 rotors.
-                </p>
-            </div><br>
-            <div id="container-3">
-                <p>
-                    The "Enigma" was made in 1918 at the end of World War 1 by Arthur Scherbius, 
-                    
-                </p>
-            </div><br>
-            <div id="container-4">
-                <p>
-                    a German electrical engineer who lived from 1878 to 1929.
-                </p>
-            </div><br>
-            <div id="container-5">
-                <p>
-                    Enigma is a famous encryption machine 
-                    used by the Germans during WWII to transmit coded messages. 
-                </p>
-            </div><br>
-            <div id="container-6">
-                <P>
-                    It was deemed uncrackable, do to it's 158,962,555,217,826,360,000 possible seetings/encryptions.
-                </P>
-            </div>
+            <label for="output-2">Decrypted Text</label>
+            <div id="output-2"></div></br><br>
+            <label id="plaintext-2" for="input-2">Encrypted Text</label><br><br>
+            <input id="input-2" autocomplete="off" size="35">
         </center>
-        <div id="alan-info">
-            <a href="https://turingarchive.kings.cam.ac.uk/" rel="link">Alan Turing Info?</a>
-        </div>
         <script type="text/javascript" src="../JAVASCRIPT/EnigmaR1E.js"></script>
         <script type="text/javascript" src="../JAVASCRIPT/reset.js"></script>
         <script type="text/javascript" src="../JAVASCRIPT/EnigmaR1D.js"></script>

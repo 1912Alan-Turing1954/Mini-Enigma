@@ -129,7 +129,7 @@ label {
 	font-family: '1942';
 }
 
-#input {
+#input, #input-2 {
 	background-color:cornsilk;
 	display: flex;
 	height: 100px; 
@@ -141,7 +141,7 @@ label {
 
 
 
-#output {
+#output, #output-2 {
 	outline: none;
 	word-break: break-all;
 	justify-content: center;
